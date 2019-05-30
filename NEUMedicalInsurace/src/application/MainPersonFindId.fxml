@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="611.0" prefWidth="865.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <children>
+      <AnchorPane layoutX="212.0" layoutY="155.0" prefHeight="457.0" prefWidth="654.0" style="-fx-background-color: #d8d8d8;">
+         <children>
+            <Label layoutX="62.0" layoutY="58.0" text="id:" />
+            <Label layoutX="62.0" layoutY="102.0" text="姓名:" />
+            <Label layoutX="62.0" layoutY="146.0" text="证件类型:" />
+            <Label layoutX="62.0" layoutY="190.0" text="证件号:" />
+            <Label layoutX="62.0" layoutY="235.0" text="性别:" />
+            <Label layoutX="62.0" layoutY="283.0" text="民族:" />
+            <Label layoutX="62.0" layoutY="332.0" text="出生日期:" />
+            <Label layoutX="62.0" layoutY="375.0" text="医疗人员类型:" />
+            <Label layoutX="238.0" layoutY="14.0" text="人员基本信息" />
+            <Button fx:id="exitButton" layoutX="588.0" layoutY="407.0" mnemonicParsing="false" onAction="#exitSystem" text="退出" />
+            <Label fx:id="idField" layoutX="259.0" layoutY="58.0" />
+            <Label fx:id="nameField" layoutX="259.0" layoutY="102.0" />
+            <Label fx:id="certificateTypeField" layoutX="259.0" layoutY="146.0" />
+            <Label fx:id="certificateCodeField" layoutX="259.0" layoutY="190.0" />
+            <Label fx:id="genderField" layoutX="259.0" layoutY="235.0" />
+            <Label fx:id="nationField" layoutX="259.0" layoutY="283.0" />
+            <Label fx:id="birthdayField" layoutX="259.0" layoutY="332.0" />
+            <Label fx:id="doctorTypeField" layoutX="259.0" layoutY="375.0" />
+         </children></AnchorPane>
+      <Label prefHeight="155.0" prefWidth="866.0" style="-fx-background-color: #A0A0A0;" text="                 管理员你好，欢迎登陆沈阳市医疗保险系统">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Accordion layoutY="155.0" prefHeight="457.0" prefWidth="202.0">
+         <panes>
+            <TitledPane animated="false" text="公共业务服务">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Accordion layoutX="-1.0">
+                           <panes>
+                              <TitledPane animated="false" text="参保单位信息维护">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Button fx:id="workOrganizationIn" layoutX="21.0" layoutY="14.0" mnemonicParsing="false" onAction="#inWorkOrganization" prefHeight="30.0" prefWidth="152.0" text="参保单位信息录入" />
+                                          <Button fx:id="workOrganizationDelete" layoutX="23.0" layoutY="51.0" mnemonicParsing="false" onAction="#deleteWorkOrganization" prefHeight="30.0" prefWidth="150.0" text="参保单位信息删除" />
+                                          <Button fx:id="workOrganizationChange" layoutX="24.0" layoutY="90.0" mnemonicParsing="false" onAction="#changeWorkOrganization" prefHeight="30.0" prefWidth="148.0" text="参保单位信息更改" />
+                                          <Button fx:id="workOrganizationFind" layoutX="25.0" layoutY="129.0" mnemonicParsing="false" onAction="#findWorkOrganization" prefHeight="30.0" prefWidth="146.0" text="参保单位信息查询" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane animated="false" text="参保个人信息维护">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Button fx:id="personMessageIn" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#messageInPerson" prefHeight="30.0" prefWidth="166.0" text="参保个人信息录入" />
+                                          <Button fx:id="personMessageDelete" layoutX="15.0" layoutY="52.0" mnemonicParsing="false" onAction="#messageDeletePerson" prefHeight="30.0" prefWidth="166.0" text="参保个人信息删除" />
+                                          <Button fx:id="personMessageChange" layoutX="17.0" layoutY="90.0" mnemonicParsing="false" onAction="#messageChangePerson" prefHeight="30.0" prefWidth="166.0" text="参保个人信息更改" />
+                                          <Button fx:id="personMessageFind" layoutX="18.0" layoutY="130.0" mnemonicParsing="false" onAction="#messageFindPerson" prefHeight="30.0" prefWidth="164.0" text="参保个人信息查询" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                           </panes>
+                        </Accordion>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" prefHeight="211.0" prefWidth="67.0" text="医疗基本信息维护">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Accordion layoutX="-10.0">
+                           <panes>
+                              <TitledPane animated="false" text="药品信息维护">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Button fx:id="drugMessageIn" layoutX="25.0" layoutY="14.0" mnemonicParsing="false" onAction="#messageInDrug" prefHeight="30.0" prefWidth="163.0" text="药品信息录入" />
+                                          <Button fx:id="drugMessageDelete" layoutX="25.0" layoutY="54.0" mnemonicParsing="false" onAction="#messageDeleteDrug" prefHeight="30.0" prefWidth="162.0" text="药品信息删除" />
+                                          <Button fx:id="drugMessageChange" layoutX="26.0" layoutY="96.0" mnemonicParsing="false" onAction="#messageChangeDrug" prefHeight="30.0" prefWidth="162.0" text="药品信息更改" />
+                                          <Button fx:id="drugMessageFind" layoutX="28.0" layoutY="136.0" mnemonicParsing="false" onAction="#messageFindDrug" prefHeight="30.0" prefWidth="160.0" text="药品信息查询" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane animated="false" text="诊疗项目信息维护">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Button fx:id="itemMessageIn" layoutX="23.0" layoutY="14.0" mnemonicParsing="false" onAction="#messageInItem" prefHeight="30.0" prefWidth="163.0" text="诊疗项目信息录入" />
+                                          <Button fx:id="ItemMessageDelete" layoutX="24.0" layoutY="51.0" mnemonicParsing="false" onAction="#messageDeleteItem" prefHeight="30.0" prefWidth="161.0" text="诊疗项目信息删除" />
+                                          <Button fx:id="ItemMessageChange" layoutX="25.0" layoutY="90.0" mnemonicParsing="false" onAction="#messageChangeItem" prefHeight="30.0" prefWidth="160.0" text="诊疗项目信息更改" />
+                                          <Button fx:id="ItemMessageFind" layoutX="27.0" layoutY="130.0" mnemonicParsing="false" onAction="#messageFindItem" prefHeight="30.0" prefWidth="157.0" text="诊疗项目信息查询" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane animated="false" text="诊疗设施信息维护">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Button fx:id="facilityMessageIn" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#messageInFacility" prefHeight="30.0" prefWidth="184.0" text="诊疗设施信息录入" />
+                                          <Button fx:id="facilityMessageDelete" layoutX="16.0" layoutY="52.0" mnemonicParsing="false" onAction="#messageDeleteFacility" prefHeight="30.0" prefWidth="183.0" text="诊疗设施信息删除" />
+                                          <Button fx:id="facilityMessageChange" layoutX="17.0" layoutY="90.0" mnemonicParsing="false" onAction="#messageChangeFacility" prefHeight="30.0" prefWidth="182.0" text="诊疗设施信息更改" />
+                                          <Button fx:id="facilityMessageChange" layoutX="18.0" layoutY="126.0" mnemonicParsing="false" onAction="#messageFindFacility" prefHeight="30.0" prefWidth="180.0" text="诊疗设施信息查询" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane animated="false" layoutX="10.0" layoutY="70.0" text="医疗机构信息维护">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Button fx:id="hospitalMessageIn" layoutX="16.0" layoutY="14.0" mnemonicParsing="false" onAction="#messageInHospital" prefHeight="30.0" prefWidth="177.0" text="医疗机构信息录入" />
+                                          <Button fx:id="HospitalMessageDelete" layoutX="17.0" layoutY="52.0" mnemonicParsing="false" onAction="#messageDeleteHospital" prefHeight="30.0" prefWidth="175.0" text="医疗机构信息删除" />
+                                          <Button fx:id="hospitalMessageChange" layoutX="19.0" layoutY="90.0" mnemonicParsing="false" onAction="#messageChangeHospital" prefHeight="30.0" prefWidth="172.0" text="医疗机构信息更改" />
+                                          <Button fx:id="hospitalMessageFind" layoutX="20.0" layoutY="129.0" mnemonicParsing="false" onAction="#messageFindHospital" prefHeight="30.0" prefWidth="169.0" text="医疗机构信息查询" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                              <TitledPane animated="false" layoutX="10.0" layoutY="100.0" text="计算费用参数维护 ">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                       <children>
+                                          <Button fx:id="parameterChange1" layoutX="16.0" layoutY="14.0" mnemonicParsing="false" onAction="#changeParameter" prefHeight="30.0" prefWidth="177.0" text="计算费用参数更改" />
+                                          <Button fx:id="parameterFind1" layoutX="17.0" layoutY="52.0" mnemonicParsing="false" onAction="#findParameter" prefHeight="30.0" prefWidth="175.0" text="计算费用参数查询" />
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </TitledPane>
+                           </panes>
+                        </Accordion>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" prefHeight="382.0" prefWidth="202.0" text="医疗待遇审批">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="institutionExamine" layoutX="12.0" layoutY="14.0" mnemonicParsing="false" onAction="#examineInstitution" prefHeight="30.0" prefWidth="178.0" text="人员就诊机构审批" />
+                        <Button fx:id="specialExamine" layoutX="13.0" layoutY="52.0" mnemonicParsing="false" onAction="#examineSpecial" prefHeight="30.0" prefWidth="177.0" text="特检特治审批" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" layoutX="10.0" layoutY="70.0" prefHeight="382.0" prefWidth="202.0" text="医保中心报销">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="reimburse" layoutX="15.0" layoutY="14.0" mnemonicParsing="false" onAction="#centerReimburse" prefHeight="30.0" prefWidth="170.0" text="医保中心报销" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" layoutX="10.0" layoutY="100.0" prefHeight="382.0" prefWidth="202.0" text="信息查询">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="priceFind" layoutX="9.0" layoutY="14.0" mnemonicParsing="false" onAction="#findPrice" prefHeight="30.0" prefWidth="185.0" text="费用查询" />
+                     </children>
+                  </AnchorPane>
+               </content>
+            </TitledPane>
+         </panes>
+      </Accordion>
+   </children>
+</AnchorPane>

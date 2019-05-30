@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="477.0" prefWidth="698.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController">
+   <children>
+      <Label id="mainHead" layoutY="-8.0" prefHeight="88.0" prefWidth="725.0" style="-fx-background-color: #c8c8c8; -fx-border-color: black;" text="                                                           欢迎来到沈阳市医疗保险系统" textFill="#2c2828" />
+      <AnchorPane layoutY="80.0" prefHeight="395.0" prefWidth="712.0">
+         <children>
+            <Button id="loginButton" layoutX="339.0" layoutY="252.0" mnemonicParsing="false" onAction="#eventButton" text="登录" />
+            <TextField id="managerIDField" fx:id="managerIDField" layoutX="309.0" layoutY="109.0" prefHeight="30.0" prefWidth="159.0" />
+            <TextField id="passwordField" fx:id="passwordField" layoutX="309.0" layoutY="175.0" prefHeight="30.0" prefWidth="159.0" />
+            <Label layoutX="234.0" layoutY="114.0" text="管理id" />
+            <Label layoutX="241.0" layoutY="188.0" text="密码" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
